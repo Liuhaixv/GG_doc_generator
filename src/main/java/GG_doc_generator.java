@@ -30,14 +30,14 @@ public class GG_doc_generator {
         保存Doc(objectElements, new File("gg_doc.lua"));
     }
 
-    public static ArrayList<ObjectElement> 读取本地文件(File file) {
-        Document document = Jsoup.parse(file.getPath(), StandardCharsets.UTF_8.name());
+    public static ArrayList<ObjectElement> 读取本地文件(File file) throws IOException {
+        Document document = Jsoup.parse(file, "utf-8");
 
         //保存所有的html对象
         ArrayList<Element[]> htmlElements = new ArrayList<>();
         ArrayList<ObjectElement> objectElements = new ArrayList<>();
 
-        Element start = document.getElementsByAttributeValue("id", "abb65d2e0810c3310903158774fd9ec63").first();
+        Element start = document.select("a").first();
 
         Element p = start;
         while (p != null) {
@@ -188,6 +188,7 @@ public class GG_doc_generator {
                 //没有返回值
             }
         }
+        objectElements.forEach(System.out::println);
 
         return objectElements;
     }
