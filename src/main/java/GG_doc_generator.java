@@ -126,6 +126,7 @@ public class GG_doc_generator {
             for (int j = 0; j < select.size(); j++) {
                 //将标签替换为使用markdown包裹
                 String str_p = select.get(j).outerHtml()
+                        .replaceAll("\n", "")
                         //如果前面有字母紧跟则添加空格
                         .replaceAll("([a-zA-Z])<code>", "$1 <code>")
                         .replaceAll("</code>([a-zA-Z])", "<code> $1")
@@ -139,9 +140,9 @@ public class GG_doc_generator {
                 if (j != 0) {
                     functionDescription.append("\n---***\n");
                 }
-                functionDescription.append(str_p);
+                functionDescription.append("---" + str_p);
             }
-            objectElement.functionDescription = functionDescription.toString().replaceAll("\n", "");
+            objectElement.functionDescription = functionDescription.toString();
 
             //处理param.description
             //如果有参数

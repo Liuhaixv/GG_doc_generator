@@ -1,6 +1,6 @@
 ---@author 刘海旭 qq1244653065
 ---@require EmmyLua-v1.3.6.219
----create time:2021-10-14 0:44:58 UTC+8
+---create time:2021-10-14 1:20:40 UTC+8
 
 ---@class int **int数据类型**
 ---@class double **double数据类型**
@@ -78,7 +78,7 @@ gg = { ANDROID_SDK_INT = nil,
        VERSION_IN = nil
 }
 ---# addListItems() #
----Add items to the saved list.
+------Add items to the saved list.
 --->
 ---## Returns ##
 --- True or string with error.
@@ -92,7 +92,9 @@ end
 
 
 ---# alert() #
----Displays a dialog with several buttons.---***The return result depends on which of the buttons was pressed.The dialog can be canceled with the"Back"button(return code 0).
+------Displays a dialog with several buttons.
+---***
+---The return result depends on which of the buttons was pressed.The dialog can be canceled with the"Back"button(return code 0).
 --->
 ---## Returns ##
 --- if dialog canceled-0,else:1 for positive,2 for negative,3 for neutral buttons.
@@ -115,7 +117,7 @@ end
 
 
 ---# allocatePage() #
----Allocated memory page(4 KB)in the target process.
+------Allocated memory page(4 KB)in the target process.
 --->
 ---## Returns ##
 --- Address of the page or string with error.
@@ -132,7 +134,7 @@ end
 
 
 ---# bytes() #
----Gets the text bytes in the specified encoding.
+------Gets the text bytes in the specified encoding.
 --->
 ---## Returns ##
 --- A table with a set of bytes in the specified encoding.
@@ -149,7 +151,9 @@ end
 
 
 ---# choice() #
----Displays the selection dialog from the list.---***The list is made up of the ***items*** table.***Selected*** sets the index of the table that will be selected by default.***Items*** must be numberic-array if you want show items in specified order.
+------Displays the selection dialog from the list.
+---***
+---The list is made up of the ***items*** table.***Selected*** sets the index of the table that will be selected by default.***Items*** must be numberic-array if you want show items in specified order.
 --->
 ---## Returns ##
 --- ***nil*** if the dialog has been canceled,or the index of the selected item.
@@ -169,7 +173,7 @@ end
 
 
 ---# clearList() #
----Clear the saved list.
+------Clear the saved list.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -181,7 +185,7 @@ end
 
 
 ---# clearResults() #
----Clear the list of search results.
+------Clear the list of search results.
 --->
 ---## Returns ##
 ---null
@@ -193,7 +197,7 @@ end
 
 
 ---# copyMemory() #
----Copy memory.
+------Copy memory.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -213,7 +217,9 @@ end
 
 
 ---# copyText() #
----Copy text to the clipboard.---***If the second parameter is true or not specified,the text will be converted as a number from the English locale to the selected one.
+------Copy text to the clipboard.
+---***
+---If the second parameter is true or not specified,the text will be converted as a number from the English locale to the selected one.
 --->
 ---## Returns ##
 ---null
@@ -230,7 +236,7 @@ end
 
 
 ---# disasm() #
----Disassemble the specified value.
+------Disassemble the specified value.
 --->
 ---## Returns ##
 --- string Disassembled opcode string.
@@ -250,7 +256,7 @@ end
 
 
 ---# dumpMemory() #
----Dump memory to files on disk.
+------Dump memory to files on disk.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -273,7 +279,9 @@ end
 
 
 ---# editAll() #
----Edit all search results.---***Before call this method you must load results via[getResults](https://gameguardian.net/help/classgg.html#ad0bd7945d37dd140f977ba7180d220f6).***Value*** will be applied only for results with specified ***type***.
+------Edit all search results.
+---***
+---Before call this method you must load results via[getResults](https://gameguardian.net/help/classgg.html#ad0bd7945d37dd140f977ba7180d220f6).***Value*** will be applied only for results with specified ***type***.
 --->
 ---## Returns ##
 --- Int with count of changes or string with error.
@@ -290,7 +298,7 @@ end
 
 
 ---# getActiveTab() #
----Get active tab in the GameGuardian UI.
+------Get active tab in the GameGuardian UI.
 --->
 ---## Returns ##
 --- int One of the constants[TAB_](https://gameguardian.net/help/classgg.html#TAB_)*.
@@ -302,7 +310,7 @@ end
 
 
 ---# getFile() #
----Gets the filename of the currently running script.
+------Gets the filename of the currently running script.
 --->
 ---## Returns ##
 --- The string with the filename of the currently running script.
@@ -314,7 +322,7 @@ end
 
 
 ---# getLine() #
----Gets the current line number of the script being executed.
+------Gets the current line number of the script being executed.
 --->
 ---## Returns ##
 --- The current line number of the script being executed.
@@ -326,7 +334,7 @@ end
 
 
 ---# getListItems() #
----Return the contents of the saved list as a table.
+------Return the contents of the saved list as a table.
 --->
 ---## Returns ##
 --- Table with results or string with error.Each element is a table with the following fields:***address***(long),***value***(number),***flags***(one of the constants[TYPE_](https://gameguardian.net/help/classgg.html#TYPE_)*),***name***(string),***freeze***(boolean),***freezeType***(one of the constants[FREEZE_](https://gameguardian.net/help/classgg.html#FREEZE_)*),***freezeFrom***(string),***freezeTo***(string).
@@ -338,7 +346,7 @@ end
 
 
 ---# getLocale() #
----Gets the string with the currently selected locale in the GameGuardian.
+------Gets the string with the currently selected locale in the GameGuardian.
 --->
 ---## Returns ##
 --- The string with the currently selected locale in the GameGuardian.
@@ -350,7 +358,7 @@ end
 
 
 ---# getRanges() #
----Return memory regions as bit mask of flags[REGION_](https://gameguardian.net/help/classgg.html#REGION_)*.
+------Return memory regions as bit mask of flags[REGION_](https://gameguardian.net/help/classgg.html#REGION_)*.
 --->
 ---## Returns ##
 --- Bit mask of flags[REGION_](https://gameguardian.net/help/classgg.html#REGION_)*.
@@ -362,7 +370,7 @@ end
 
 
 ---# getRangesList() #
----Get the list of memory regions of the selected process.
+------Get the list of memory regions of the selected process.
 --->
 ---## Returns ##
 --- A list table with memory regions.Each element is a table with fields:***state,start,end,type,name,internalName***.
@@ -376,7 +384,7 @@ end
 
 
 ---# getResults() #
----Load results into results list and return its as a table.
+------Load results into results list and return its as a table.
 --->
 ---## Returns ##
 --- Table with results or string with error.Each element is a table with three keys:***address***(long),***value***(number),***flags***(one of the constants[TYPE_](https://gameguardian.net/help/classgg.html#TYPE_)*).
@@ -414,7 +422,7 @@ end
 
 
 ---# getResultsCount() #
----Get the number of found results.
+------Get the number of found results.
 --->
 ---## Returns ##
 --- The number of found results.
@@ -426,7 +434,7 @@ end
 
 
 ---# getSelectedElements() #
----Returns the selected adresses in the memory editor.
+------Returns the selected adresses in the memory editor.
 --->
 ---## Returns ##
 --- Table with adresses(long)or string with error.
@@ -438,7 +446,7 @@ end
 
 
 ---# getSelectedListItems() #
----Returns the selected items in the saved lists.
+------Returns the selected items in the saved lists.
 --->
 ---## Returns ##
 --- Table with results or string with error.Each element is a table with the following fields:***address***(long),***value***(number),***flags***(one of the constants[TYPE_](https://gameguardian.net/help/classgg.html#TYPE_)*),***name***(string),***freeze***(boolean),***freezeType***(one of the constants[FREEZE_](https://gameguardian.net/help/classgg.html#FREEZE_)*),***freezeFrom***(string),***freezeTo***(string).
@@ -450,7 +458,7 @@ end
 
 
 ---# getSelectedResults() #
----Returns the selected items in the search results.
+------Returns the selected items in the search results.
 --->
 ---## Returns ##
 --- Table with results or string with error.Each element is a table with three keys:***address***(long),***value***(number),***flags***(one of the constants[TYPE_](https://gameguardian.net/help/classgg.html#TYPE_)*).
@@ -462,7 +470,7 @@ end
 
 
 ---# getSpeed() #
----Get the current speed from the speedhack.
+------Get the current speed from the speedhack.
 --->
 ---## Returns ##
 --- The current speed from the speedhack.
@@ -474,7 +482,15 @@ end
 
 
 ---# getTargetInfo() #
----Get a table with information about the selected process if possible.---***The set of fields can be different.Print the resulting table to see the available fields.---***Possible fields:***firstInstallTime,lastUpdateTime,packageName,sharedUserId,sharedUserLabel,versionCode,versionName,activities(name,label),installer,enabledSetting,backupAgentName,className,dataDir,descriptionRes,flags,icon,labelRes,logo,manageSpaceActivityName,name,nativeLibraryDir,permission,processName,publicSourceDir,sourceDir,targetSdkVersion,taskAffinity,theme,uid,label,cmdLine,pid,x64,RSS.***---******cmdLine***-The contents of ***/proc/pid/cmdline***.***pid***-PID of the process.***x64***-True if the 64-bit process.***RSS***-The amount of RSS memory for the process,in KB.---***Read about[PackageInfo](https://developer.android.com/reference/android/content/pm/PackageInfo)and[ApplicationInfo](https://developer.android.com/reference/android/content/pm/ApplicationInfo)in ***Android*** for means each field.
+------Get a table with information about the selected process if possible.
+---***
+---The set of fields can be different.Print the resulting table to see the available fields.
+---***
+---Possible fields:***firstInstallTime,lastUpdateTime,packageName,sharedUserId,sharedUserLabel,versionCode,versionName,activities(name,label),installer,enabledSetting,backupAgentName,className,dataDir,descriptionRes,flags,icon,labelRes,logo,manageSpaceActivityName,name,nativeLibraryDir,permission,processName,publicSourceDir,sourceDir,targetSdkVersion,taskAffinity,theme,uid,label,cmdLine,pid,x64,RSS.***
+---***
+---***cmdLine***-The contents of ***/proc/pid/cmdline***.***pid***-PID of the process.***x64***-True if the 64-bit process.***RSS***-The amount of RSS memory for the process,in KB.
+---***
+---Read about[PackageInfo](https://developer.android.com/reference/android/content/pm/PackageInfo)and[ApplicationInfo](https://developer.android.com/reference/android/content/pm/ApplicationInfo)in ***Android*** for means each field.
 --->
 ---## Returns ##
 --- A table with information about the selected process or ***nil***.
@@ -486,7 +502,7 @@ end
 
 
 ---# getTargetPackage() #
----Get the package name of the selected process,if possible.
+------Get the package name of the selected process,if possible.
 --->
 ---## Returns ##
 --- The package name of the selected process as string or ***nil***.
@@ -498,7 +514,7 @@ end
 
 
 ---# getValues() #
----Gets the values for the list of items.
+------Gets the values for the list of items.
 --->
 ---## Returns ##
 --- A new table with results or string with error.Each element is a table with three keys:***address***(long),***value***(number),***flags***(one of the constants[TYPE_](https://gameguardian.net/help/classgg.html#TYPE_)*).
@@ -512,7 +528,7 @@ end
 
 
 ---# getValuesRange() #
----Get the memory regions for the passed value table.
+------Get the memory regions for the passed value table.
 --->
 ---## Returns ##
 --- A table where each key,from the original table,will be associated with a short region code(***Ch***,for example).Or string with error.
@@ -526,7 +542,7 @@ end
 
 
 ---# gotoAddress() #
----Go to the ***address*** in the memory editor.
+------Go to the ***address*** in the memory editor.
 --->
 ---## Returns ##
 ---null
@@ -540,7 +556,7 @@ end
 
 
 ---# hideUiButton() #
----Hides the UI button.
+------Hides the UI button.
 --->
 ---## Returns ##
 ---null
@@ -552,7 +568,9 @@ end
 
 
 ---# isClickedUiButton() #
----Gets the click status of the ui button.---***The call resets the click status.
+------Gets the click status of the ui button.
+---***
+---The call resets the click status.
 --->
 ---## Returns ##
 --- ***true*** if the button has been clicked since the last check.***false***-if there was no click.***nil***-if the button is hidden.
@@ -564,7 +582,7 @@ end
 
 
 ---# isPackageInstalled() #
----Check whether the specified application is installed on the system by the package name.
+------Check whether the specified application is installed on the system by the package name.
 --->
 ---## Returns ##
 --- ***true*** if package installed or ***false*** otherwise.
@@ -578,7 +596,7 @@ end
 
 
 ---# isProcessPaused() #
----Get pause state of the selected process.
+------Get pause state of the selected process.
 --->
 ---## Returns ##
 --- ***true*** if the process paused or ***false*** otherwise.
@@ -590,7 +608,7 @@ end
 
 
 ---# isVisible() #
----Check if the GameGuardian UI is open.
+------Check if the GameGuardian UI is open.
 --->
 ---## Returns ##
 --- ***true*** if the GameGuardian UI open or ***false*** otherwise.
@@ -602,7 +620,7 @@ end
 
 
 ---# loadList() #
----Load the saved list from the file.
+------Load the saved list from the file.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -619,7 +637,9 @@ end
 
 
 ---# loadResults() #
----Loads the search results from the table.---***Existing search results will be cleared.
+------Loads the search results from the table.
+---***
+---Existing search results will be cleared.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -633,7 +653,15 @@ end
 
 
 ---# makeRequest() #
----Performs a GET or POST request over HTTP or HTTPS.---***The first time the function is called,the user is asked to access the Internet.Request one for each script run.If the user declines access,all subsequent calls will immediately return an error.If allowed-will be processed immediately.Permission to access must be obtained each time the script is run.---***The function executes the query and returns a table with the result on success.On error,the string with the error text will be returned.In logcat there will be more information.---***The result table can contain the following fields:---***HTTPS requests do not perform certificate validation.
+------Performs a GET or POST request over HTTP or HTTPS.
+---***
+---The first time the function is called,the user is asked to access the Internet.Request one for each script run.If the user declines access,all subsequent calls will immediately return an error.If allowed-will be processed immediately.Permission to access must be obtained each time the script is run.
+---***
+---The function executes the query and returns a table with the result on success.On error,the string with the error text will be returned.In logcat there will be more information.
+---***
+---The result table can contain the following fields:
+---***
+---HTTPS requests do not perform certificate validation.
 --->
 ---## Returns ##
 --- The table on success,the string on error.
@@ -653,7 +681,9 @@ end
 
 
 ---# multiChoice() #
----Displays the multiple choice dialog.---******Items*** must be numberic-array if you want show items in specified order.
+------Displays the multiple choice dialog.
+---***
+---***Items*** must be numberic-array if you want show items in specified order.
 --->
 ---## Returns ##
 --- ***nil*** if the dialog has been canceled,or a table with the selected keys and values ***true***(analogue of the ***selected*** param).
@@ -673,7 +703,7 @@ end
 
 
 ---# numberFromLocale() #
----Replaces the localized decimal separator and thousands separator with separators used in Lua(such as in English).
+------Replaces the localized decimal separator and thousands separator with separators used in Lua(such as in English).
 --->
 ---## Returns ##
 --- Fixed number as string.
@@ -687,7 +717,7 @@ end
 
 
 ---# numberToLocale() #
----Replaces the decimal separator and the thousands separator with a localized version.
+------Replaces the decimal separator and the thousands separator with a localized version.
 --->
 ---## Returns ##
 --- Fixed number as string.
@@ -701,7 +731,9 @@ end
 
 
 ---# processKill() #
----Force kill the selected process.---***If you call this call too often,your script may be interrupted.
+------Force kill the selected process.
+---***
+---If you call this call too often,your script may be interrupted.
 --->
 ---## Returns ##
 --- ***true*** on success or ***false*** otherwise.
@@ -713,7 +745,7 @@ end
 
 
 ---# processPause() #
----Pauses the selected process.
+------Pauses the selected process.
 --->
 ---## Returns ##
 --- ***true*** on success or ***false*** otherwise.
@@ -725,7 +757,7 @@ end
 
 
 ---# processResume() #
----Resumes the selected process if it paused.
+------Resumes the selected process if it paused.
 --->
 ---## Returns ##
 --- ***true*** on success or ***false*** otherwise.
@@ -737,7 +769,9 @@ end
 
 
 ---# processToggle() #
----Toggle the pause state of the selected process.---***If process paused then it will be resumed else it will be paused.
+------Toggle the pause state of the selected process.
+---***
+---If process paused then it will be resumed else it will be paused.
 --->
 ---## Returns ##
 --- ***true*** on success or ***false*** otherwise.
@@ -749,7 +783,19 @@ end
 
 
 ---# prompt() #
----Displays the dialog for data entry.---***For respect order of fields ***prompts*** must be numeric-array.---***Also for the types ***'number','setting','speed'***,the separators are converted to a localized version and vice versa during output.---***For example,the string ***'6,789.12345'*** will be in the form displayed as ***'6789,12345'*** for the German locale(***','***-decimal separator,***'.'***-thousands separator).If the user enters ***'4.567,89'***,then the script will receive ***'4567.89'***.---***To display the seek bar,you must specify the type ***'number'***,the minimum and maximum value at the end of the prompt text,separated by a semicolon and surrounded by square brackets.The minimum value must be less than the maximum.If the default value is not in the range,the closest match will be used.Only integers can be used.The step size is always 1.---***See examples.---***If the config for seek bar is not recognized,the usual input of a number as text will be used.
+------Displays the dialog for data entry.
+---***
+---For respect order of fields ***prompts*** must be numeric-array.
+---***
+---Also for the types ***'number','setting','speed'***,the separators are converted to a localized version and vice versa during output.
+---***
+---For example,the string ***'6,789.12345'*** will be in the form displayed as ***'6789,12345'*** for the German locale(***','***-decimal separator,***'.'***-thousands separator).If the user enters ***'4.567,89'***,then the script will receive ***'4567.89'***.
+---***
+---To display the seek bar,you must specify the type ***'number'***,the minimum and maximum value at the end of the prompt text,separated by a semicolon and surrounded by square brackets.The minimum value must be less than the maximum.If the default value is not in the range,the closest match will be used.Only integers can be used.The step size is always 1.
+---***
+---See examples.
+---***
+---If the config for seek bar is not recognized,the usual input of a number as text will be used.
 --->
 ---## Returns ##
 --- ***nil*** if the dialog has been canceled,or the table with keys from ***prompts*** and values from input fields.
@@ -769,7 +815,9 @@ end
 
 
 ---# refineAddress() #
----Perform an address refine search with the specified parameters.---***If no results in results list then do nothing.
+------Perform an address refine search with the specified parameters.
+---***
+---If no results in results list then do nothing.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -801,7 +849,9 @@ end
 
 
 ---# refineNumber() #
----Perform a refine search for a number,with the specified parameters.---***If no results in results list then do nothing.
+------Perform a refine search for a number,with the specified parameters.
+---***
+---If no results in results list then do nothing.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -833,7 +883,7 @@ end
 
 
 ---# removeListItems() #
----Remove items from the saved list.
+------Remove items from the saved list.
 --->
 ---## Returns ##
 --- True or string with error.
@@ -847,7 +897,7 @@ end
 
 
 ---# removeResults() #
----Remove ***results*** from the list of results found.
+------Remove ***results*** from the list of results found.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -861,7 +911,9 @@ end
 
 
 ---# require() #
----Checks the version of GameGuardian.---***If the version or build number is lower than required,the script will be ended with the message to update GameGuardian.
+------Checks the version of GameGuardian.
+---***
+---If the version or build number is lower than required,the script will be ended with the message to update GameGuardian.
 --->
 ---## Returns ##
 ---null
@@ -878,7 +930,7 @@ end
 
 
 ---# saveList() #
----Save the saved list to the file.
+------Save the saved list to the file.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -895,7 +947,11 @@ end
 
 
 ---# saveVariable() #
----Saves the variable to a file.---***The result of the execution will be a.lua file,which can then be loaded via---***Stores only strings,numbers,and tables.Cyclic references are processed correctly.If you need something more,read:[lua-users wiki:Table Serialization](http://lua-users.org/wiki/TableSerialization)
+------Saves the variable to a file.
+---***
+---The result of the execution will be a.lua file,which can then be loaded via
+---***
+---Stores only strings,numbers,and tables.Cyclic references are processed correctly.If you need something more,read:[lua-users wiki:Table Serialization](http://lua-users.org/wiki/TableSerialization)
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -912,7 +968,9 @@ end
 
 
 ---# searchAddress() #
----Perform an address search with the specified parameters.---***If no results in results list then perform new search,else refine search.So if you need to perform a search,without refine,you must first call ***clearResults***.
+------Perform an address search with the specified parameters.
+---***
+---If no results in results list then perform new search,else refine search.So if you need to perform a search,without refine,you must first call ***clearResults***.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -944,7 +1002,7 @@ end
 
 
 ---# searchFuzzy() #
----Refine fuzzy search,with the specified parameters.
+------Refine fuzzy search,with the specified parameters.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -973,7 +1031,9 @@ end
 
 
 ---# searchNumber() #
----Perform a search for a number,with the specified parameters.---***If no results in results list then perform new search,else refine search.So if you need to perform a search,without refine,you must first call ***clearResults***.
+------Perform a search for a number,with the specified parameters.
+---***
+---If no results in results list then perform new search,else refine search.So if you need to perform a search,without refine,you must first call ***clearResults***.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -1005,7 +1065,7 @@ end
 
 
 ---# searchPointer() #
----Searches for values that may be pointers to elements of the current search result.
+------Searches for values that may be pointers to elements of the current search result.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -1028,7 +1088,7 @@ end
 
 
 ---# setRanges() #
----Set memory regions to desired bit mask of flags[REGION_](https://gameguardian.net/help/classgg.html#REGION_)*.
+------Set memory regions to desired bit mask of flags[REGION_](https://gameguardian.net/help/classgg.html#REGION_)*.
 --->
 ---## Returns ##
 ---null
@@ -1042,7 +1102,9 @@ end
 
 
 ---# setSpeed() #
----Set the speed of the speedhack.---***If speedhack was not loaded,then it will be loaded.The call is blocking.The script will wait for speedhack full load.
+------Set the speed of the speedhack.
+---***
+---If speedhack was not loaded,then it will be loaded.The call is blocking.The script will wait for speedhack full load.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -1056,7 +1118,7 @@ end
 
 
 ---# setValues() #
----Set the values for the list of items.
+------Set the values for the list of items.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -1070,7 +1132,9 @@ end
 
 
 ---# setVisible() #
----Open or close the GameGuardian UI.---***If you call this call too often,your script may be interrupted.
+------Open or close the GameGuardian UI.
+---***
+---If you call this call too often,your script may be interrupted.
 --->
 ---## Returns ##
 ---null
@@ -1084,7 +1148,9 @@ end
 
 
 ---# showUiButton() #
----Shows the UI button.---***The UI button has an icon with the letters"Sx"and is visible only when you open the GameGuardian interface.The button is floating,displayed on top of the main GameGuardian interface.
+------Shows the UI button.
+---***
+---The UI button has an icon with the letters"Sx"and is visible only when you open the GameGuardian interface.The button is floating,displayed on top of the main GameGuardian interface.
 --->
 ---## Returns ##
 ---null
@@ -1096,7 +1162,9 @@ end
 
 
 ---# skipRestoreState() #
----Do not restore the state of the GameGuardian,after the script is completed.---***For example,by default,a set of memory regions restored after end script execution.This call allow prevent this.
+------Do not restore the state of the GameGuardian,after the script is completed.
+---***
+---For example,by default,a set of memory regions restored after end script execution.This call allow prevent this.
 --->
 ---## Returns ##
 ---null
@@ -1108,7 +1176,7 @@ end
 
 
 ---# sleep() #
----Causes the currently executing script to sleep(temporarily cease execution)for the specified number of milliseconds,subject to the precision and accuracy of system timers and schedulers.
+------Causes the currently executing script to sleep(temporarily cease execution)for the specified number of milliseconds,subject to the precision and accuracy of system timers and schedulers.
 --->
 ---## Returns ##
 ---null
@@ -1122,7 +1190,7 @@ end
 
 
 ---# startFuzzy() #
----Start a fuzzy search,with the specified parameters.
+------Start a fuzzy search,with the specified parameters.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -1145,7 +1213,7 @@ end
 
 
 ---# timeJump() #
----Performs a time jump.
+------Performs a time jump.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
@@ -1159,7 +1227,13 @@ end
 
 
 ---# toast() #
----Show the toast.---***If the second parameter is true,show the toast for a short period of time.---***A toast is a view containing a quick little message for the user.---***When the view is shown to the user,appears as a floating view over the application.It will never receive focus.The user will probably be in the middle of typing something else.The idea is to be as unobtrusive as possible,while still showing the user the information you want them to see.Two examples are the volume control,and the brief message saying that your settings have been saved.
+------Show the toast.
+---***
+---If the second parameter is true,show the toast for a short period of time.
+---***
+---A toast is a view containing a quick little message for the user.
+---***
+---When the view is shown to the user,appears as a floating view over the application.It will never receive focus.The user will probably be in the middle of typing something else.The idea is to be as unobtrusive as possible,while still showing the user the information you want them to see.Two examples are the volume control,and the brief message saying that your settings have been saved.
 --->
 ---## Returns ##
 ---null
@@ -1176,7 +1250,9 @@ end
 
 
 ---# unrandomizer() #
----Work with Unrandomizer.---***If Unrandomizer was not loaded,then it will be loaded.The call is blocking.The script will wait for Unrandomizer full load.You can set any parameter in ***nil*** so that it is not used.
+------Work with Unrandomizer.
+---***
+---If Unrandomizer was not loaded,then it will be loaded.The call is blocking.The script will wait for Unrandomizer full load.You can set any parameter in ***nil*** so that it is not used.
 --->
 ---## Returns ##
 --- ***true*** or string with error.
