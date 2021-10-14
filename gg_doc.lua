@@ -1,8 +1,8 @@
 ---@author 刘海旭 qq1244653065
 ---@require EmmyLua-v1.3.6.219
----create time:2021-10-14 1:20:40 UTC+8
+---create time:2021-10-14 11:27:58 UTC+8
 
----@class int **int数据类型**
+---@class int:number **int数据类型**
 ---@class double **double数据类型**
 ---@class bool **bool数据类型**
 ---@class true **真**
@@ -10,6 +10,32 @@
 ---@class long **long数据类型**
 ---@class mixed **混合数据类型**
 ---@class gg
+
+---常量 constants
+---@class TYPE_  **变量类型**
+local TYPE_
+---@class FREEZE_ **冻结类型**
+local FREEZE_
+
+---@class table_gg:table
+-----address long 地址值
+-----value string string with a value, optional
+-----flags TYPE_ one of the constants TYPE_*, required
+-----name string optional
+-----freeze boolean optional, default false
+-----freezeType FREEZE_ one of the constants FREEZE_*, optional, default FREEZE_NORMAL
+-----freezeFrom string optional
+-----freezeTo string optional
+---@field address long 地址值
+---@field value string string with a value, optional
+---@field flags TYPE_ one of the constants TYPE_*, required
+---@field name string optional
+---@field freeze boolean optional, default false
+---@field freezeType FREEZE_ one of the constants FREEZE_*, optional, default FREEZE_NORMAL
+---@field freezeFrom string optional
+---@field freezeTo string optional
+table_gg = {}
+
 gg = { ANDROID_SDK_INT = nil,
        ASM_ARM = nil,
        ASM_ARM64 = nil,
@@ -21,9 +47,13 @@ gg = { ANDROID_SDK_INT = nil,
        EXT_FILES_DIR = nil,
        EXT_STORAGE = nil,
        FILES_DIR = nil,
+       ---@type FREEZE_
        FREEZE_IN_RANGE = nil,
+       ---@type FREEZE_
        FREEZE_MAY_DECREASE = nil,
+       ---@type FREEZE_
        FREEZE_MAY_INCREASE = nil,
+       ---@type FREEZE_
        FREEZE_NORMAL = nil,
        LOAD_APPEND = nil,
        LOAD_VALUES = nil,
@@ -66,13 +96,21 @@ gg = { ANDROID_SDK_INT = nil,
        TAB_SAVED_LIST = nil,
        TAB_SEARCH = nil,
        TAB_SETTINGS = nil,
+       ---@type TYPE_
        TYPE_AUTO = nil,
+       ---@type TYPE_
        TYPE_BYTE = nil,
+       ---@type TYPE_
        TYPE_DOUBLE = nil,
+       ---@type TYPE_
        TYPE_DWORD = nil,
+       ---@type TYPE_
        TYPE_FLOAT = nil,
+       ---@type TYPE_
        TYPE_QWORD = nil,
+       ---@type TYPE_
        TYPE_WORD = nil,
+       ---@type TYPE_
        TYPE_XOR = nil,
        VERSION = nil,
        VERSION_IN = nil
